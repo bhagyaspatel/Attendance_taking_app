@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/sectionListFragment2">
+    <fragment
+        android:id="@+id/sectionListFragment2"
+        android:name="com.example.attendanceapp.ui.SectionListFragment"
+        android:label="SectionListFragment"
+        tools:layout="@layout/fragment_section_list">
+        <action
+            android:id="@+id/action_sectionListFragment2_to_studentListFragment"
+            app:destination="@id/studentListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.example.attendanceapp.ui.StudentListFragment"
+        android:label="fragment_student_list"
+        tools:layout="@layout/fragment_student_list" >
+        <action
+            android:id="@+id/action_studentListFragment_to_absentListFragment"
+            app:destination="@id/absentListFragment" />
+        <argument
+            android:name="flag"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/absentListFragment"
+        android:name="com.example.attendanceapp.ui.AbsentListFragment"
+        android:label="fragment_absent_list"
+        tools:layout="@layout/fragment_absent_list" />
+</navigation>

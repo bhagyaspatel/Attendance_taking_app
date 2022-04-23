@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.StudentListFragment">
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/student_list_rv"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       app:layout_constraintTop_toTopOf="@id/toolbar"
+       app:layout_constraintBottom_toTopOf="@+id/presentBtn"
+       android:layout_marginTop="60dp"
+       tools:listitem="@layout/item_list"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_200"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/toolbar_layout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/presentBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Presents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#DFA32A"
+        app:layout_constraintEnd_toStartOf="@id/absentBtn"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/absentBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Absents"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/presentBtn"
+        android:background="#DFA32A"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
