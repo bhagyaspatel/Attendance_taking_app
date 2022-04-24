@@ -4,18 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/sectionListFragment2">
+
     <fragment
         android:id="@+id/sectionListFragment2"
-        android:name="com.example.attendanceapp.ui.SectionListFragment"
+        android:name="com.example.attendanceapp.ui.list.SectionListFragment"
         android:label="SectionListFragment"
         tools:layout="@layout/fragment_section_list">
         <action
             android:id="@+id/action_sectionListFragment2_to_studentListFragment"
             app:destination="@id/studentListFragment" />
+        <action
+            android:id="@+id/action_sectionListFragment2_to_calender_Fragment"
+            app:destination="@id/calender_Fragment" />
+        <action
+            android:id="@+id/action_sectionListFragment2_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_sectionListFragment2_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/studentListFragment"
-        android:name="com.example.attendanceapp.ui.StudentListFragment"
+        android:name="com.example.attendanceapp.ui.list.StudentListFragment"
         android:label="fragment_student_list"
         tools:layout="@layout/fragment_student_list" >
         <action
@@ -26,9 +37,29 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
+
     <fragment
         android:id="@+id/absentListFragment"
-        android:name="com.example.attendanceapp.ui.AbsentListFragment"
+        android:name="com.example.attendanceapp.ui.absent.AbsentListFragment"
         android:label="fragment_absent_list"
-        tools:layout="@layout/fragment_absent_list" />
+        tools:layout="@layout/fragment_absent_list"/>
+
+    <fragment
+        android:id="@+id/calender_Fragment"
+        android:name="com.example.attendanceapp.ui.drawerPages.CalenderFragment"
+        android:label="fragment_calender_"
+        tools:layout="@layout/fragment_calender_"/>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.attendanceapp.ui.drawerPages.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about"/>
+
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.attendanceapp.ui.drawerPages.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact"/>
+
 </navigation>

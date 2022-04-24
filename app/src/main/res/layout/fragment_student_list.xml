@@ -4,22 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.StudentListFragment">
+    tools:context=".ui.list.StudentListFragment">
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/student_list_rv"
        android:layout_width="match_parent"
        android:layout_height="0dp"
-       app:layout_constraintTop_toTopOf="@id/toolbar"
+       app:layout_constraintTop_toBottomOf="@id/toolbar"
        app:layout_constraintBottom_toTopOf="@+id/presentBtn"
-       android:layout_marginTop="60dp"
        tools:listitem="@layout/item_list"/>
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/teal_200"
+        android:background="#DABEC0"
         app:layout_constraintTop_toTopOf="parent">
 
         <include layout="@layout/toolbar_layout"
@@ -46,5 +45,10 @@
         app:layout_constraintStart_toEndOf="@id/presentBtn"
         android:background="#DFA32A"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.example.attendanceapp.ui
+package com.example.attendanceapp.ui.absent
 
 import android.view.LayoutInflater
 import android.view.View

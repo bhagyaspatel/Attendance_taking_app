@@ -5,11 +5,19 @@
       <map>
         <entry key="app/src/main/res/layout/absent_item_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_about.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_absent_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_calender_.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_section_list.xml" value="0.2604166666666667" />
         <entry key="app/src/main/res/layout/fragment_student_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar_layout.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/toolbar_layout2.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/toolbar_layout_blue_bg.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/toolbar_texts.xml" value="0.10555555555555556" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.2953125" />
+        <entry key="app/src/main/res/menu/markall_menu_items.xml" value="0.2953125" />
       </map>
     </option>
   </component>

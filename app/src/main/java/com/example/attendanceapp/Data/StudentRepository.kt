@@ -17,4 +17,8 @@ class StudentRepository (context : Application) {
     suspend fun deleteStudent (student: Student){
         return studentAbsentDao.deleteStudent(student)
     }
+
+    suspend fun insertAll (studentList : List<Student>){
+        return studentAbsentDao.insertAll(studentList)
+    }
 }

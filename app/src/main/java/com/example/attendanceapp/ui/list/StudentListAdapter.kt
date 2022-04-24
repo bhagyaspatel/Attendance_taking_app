@@ -1,6 +1,5 @@
-package com.example.attendanceapp.ui
+package com.example.attendanceapp.ui.list
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import com.example.attendanceapp.Data.Student
 import com.example.attendanceapp.R
 import kotlinx.android.extensions.LayoutContainer
 
-class StudentListAdapter (private val list : MutableList<Student>)
+class StudentListAdapter (private var list : MutableList<Student>)
     : RecyclerView.Adapter<StudentListAdapter.studentViewHolder>() {
 
     inner class studentViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
@@ -21,19 +20,16 @@ class StudentListAdapter (private val list : MutableList<Student>)
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): StudentListAdapter.studentViewHolder {
+    ): studentViewHolder {
         val itemLayout = LayoutInflater.from (parent.context).inflate(R.layout.item_list, parent, false)
         return studentViewHolder(itemLayout)
     }
 
-    override fun onBindViewHolder(holder: StudentListAdapter.studentViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: studentViewHolder, position: Int) {
         val currentItem = list[position]
-
-//        Log.d (TAG, position.toString()) //working fine
-//        Log.d (TAG, currentItem?.name)
-
         holder.studentName.text = currentItem.name
         holder.usn.text = currentItem.usn
+
     }
 
     override fun getItemCount(): Int {
@@ -41,14 +37,18 @@ class StudentListAdapter (private val list : MutableList<Student>)
     }
 
     fun removeAt (position: Int){
-//        val id = list[position].id //working fine
-//        Log.d (TAG, "ListAdaper id : $id")
         list.removeAt(position)
         notifyItemRemoved(position)
     }
 
-    fun putBack(student: Student) {
-        list.add(student)
-        notifyItemInserted(list.size -1)
+    fun putBack(student: Student, position : Int) {
+        list.add(position, student)
+        notifyItemInserted(position)
     }
+
+    fun markAll() {
+        list.removeAll(list)
+        notifyDataSetChanged()
+    }
+
 }

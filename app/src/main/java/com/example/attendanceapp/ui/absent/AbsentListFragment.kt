@@ -1,15 +1,17 @@
-package com.example.attendanceapp.ui
+package com.example.attendanceapp.ui.absent
 
 import android.os.Bundle
+import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.attendanceapp.R
+import com.example.attendanceapp.ui.StudentViewModel
+import com.example.attendanceapp.ui.list.TAG
 import kotlinx.android.synthetic.main.fragment_absent_list.*
+import java.text.DateFormat
+import java.util.*
 
 class AbsentListFragment : Fragment() {
 
@@ -26,10 +28,16 @@ class AbsentListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
         return inflater.inflate(R.layout.fragment_absent_list, container, false)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val calendar = Calendar.getInstance()
+        val currentDate : String = DateFormat.getDateInstance().format(calendar.time)
+        dateTxt.setText(currentDate)
 
         viewModel.students.observe(viewLifecycleOwner){
             with(absent_student_list_rv){

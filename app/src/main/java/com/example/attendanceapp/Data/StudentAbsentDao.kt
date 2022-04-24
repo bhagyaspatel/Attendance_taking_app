@@ -14,4 +14,8 @@ interface StudentAbsentDao {
 
     @Delete
     suspend fun deleteStudent (student: Student)
+
+    @Insert
+    suspend fun insertAll (studentList : List<Student>)
+
 }

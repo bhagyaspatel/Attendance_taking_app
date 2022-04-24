@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+
+    <ImageView
+        android:id="@+id/ritLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/ritlogo"/>
+
+    <TextView
+        android:id="@+id/ritName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="#352169"
+        android:text="Ramaiah Institute Of Technology"
+        app:layout_constraintStart_toEndOf="@id/ritLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#432C7E"
+        android:text="Attendance Sheet"
+        app:layout_constraintStart_toEndOf="@id/ritLogo"
+        app:layout_constraintTop_toBottomOf="@id/ritName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
