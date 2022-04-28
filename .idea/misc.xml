@@ -3,14 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/gradient_bg.xml" value="0.134" />
+        <entry key="app/src/main/res/drawable/gradient_bg2.xml" value="0.134" />
         <entry key="app/src/main/res/layout/absent_item_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/chat_list_item.xml" value="0.1852355072463768" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_absent_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_calender_.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/fragment_section_list.xml" value="0.2604166666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.1852355072463768" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_section_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_student_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/gradient_bg.xml" value="0.1852355072463768" />
         <entry key="app/src/main/res/layout/item_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/toolbar_layout.xml" value="0.335" />
         <entry key="app/src/main/res/layout/toolbar_layout2.xml" value="0.375" />

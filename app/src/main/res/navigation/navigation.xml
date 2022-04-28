@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/sectionListFragment2">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/sectionListFragment2"
@@ -14,14 +14,19 @@
             android:id="@+id/action_sectionListFragment2_to_studentListFragment"
             app:destination="@id/studentListFragment" />
         <action
-            android:id="@+id/action_sectionListFragment2_to_calender_Fragment"
-            app:destination="@id/calender_Fragment" />
-        <action
             android:id="@+id/action_sectionListFragment2_to_contactFragment"
             app:destination="@id/contactFragment" />
         <action
             android:id="@+id/action_sectionListFragment2_to_aboutFragment"
             app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_sectionListFragment2_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sectionListFragment2_to_chatFragment"
+            app:destination="@id/chatFragment" />
     </fragment>
 
     <fragment
@@ -45,12 +50,6 @@
         tools:layout="@layout/fragment_absent_list"/>
 
     <fragment
-        android:id="@+id/calender_Fragment"
-        android:name="com.example.attendanceapp.ui.drawerPages.CalenderFragment"
-        android:label="fragment_calender_"
-        tools:layout="@layout/fragment_calender_"/>
-
-    <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.attendanceapp.ui.drawerPages.AboutFragment"
         android:label="fragment_about"
@@ -61,5 +60,35 @@
         android:name="com.example.attendanceapp.ui.drawerPages.ContactFragment"
         android:label="fragment_contact"
         tools:layout="@layout/fragment_contact"/>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.attendanceapp.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_sectionListFragment2"
+            app:destination="@id/sectionListFragment2" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.attendanceapp.ui.login.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_sectionListFragment2"
+            app:destination="@id/sectionListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.attendanceapp.ui.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 
 </navigation>

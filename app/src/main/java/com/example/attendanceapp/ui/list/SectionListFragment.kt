@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.attendanceapp.Data.Student
@@ -76,29 +77,39 @@ class SectionListFragment : Fragment() {
 
     private fun setupNavigationDrawer() {
         val navController = Navigation.findNavController(requireActivity(), R.id.fragmentContainerView)
-        val drawerLayout = requireActivity().findViewById<DrawerLayout>(R.id.drawerLayout)
+        val drawerLayout = requireActivity().findViewById<DrawerLayout>(R.id.drawerLayout) //from activity_xml
         val navigationView = requireActivity().findViewById<NavigationView>(R.id.navigation_view)
 
-        NavigationUI.setupWithNavController(toolbar, navController, drawerLayout)
+        NavigationUI.setupWithNavController(toolbar,navController,
+            AppBarConfiguration.Builder(R.id.navigation, R.id.sectionListFragment2)
+                .setDrawerLayout(drawerLayout)
+                .build())
+
         navigationView.setupWithNavController(navController)
+        Log.d(TAG, "drawer open")
 
         navigationView.setNavigationItemSelectedListener {
+            Log.d(TAG, "drawer closeddd")
             drawerLayout.closeDrawers()
 
             when(it.itemId){
-                R.id.calenderBtn ->{
+                R.id.chatBtn ->{
+                    Log.d(TAG, "chat clicked")
                     findNavController().navigate(
-                        SectionListFragmentDirections.actionSectionListFragment2ToCalenderFragment())
+                        SectionListFragmentDirections.actionSectionListFragment2ToChatFragment()
+                    )
                     true
                 }
                 R.id.aboutPage ->{
                     findNavController().navigate(
-                        SectionListFragmentDirections.actionSectionListFragment2ToAboutFragment())
+                        SectionListFragmentDirections.actionSectionListFragment2ToAboutFragment()
+                    )
                     true
                 }
                 R.id.contactPage ->{
                     findNavController().navigate(
-                        SectionListFragmentDirections.actionSectionListFragment2ToContactFragment())
+                        SectionListFragmentDirections.actionSectionListFragment2ToContactFragment()
+                    )
                     true
                 }
                 else -> false

@@ -3,17 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient_bg"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/selectSec"
+        android:fontFamily="@font/monserat_semibold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="150dp"
         android:text="@string/select_section"
-        android:textSize="20sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,17 +25,19 @@
         android:id="@+id/aSecBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:background="#E94299DC"
         android:text="@string/a_section"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectSec" />
 
     <androidx.appcompat.widget.AppCompatButton
-
+        android:outlineProvider="background"
         android:id="@+id/bSecBtn"
         android:layout_width="200dp"
+        android:textSize="16sp"
         android:layout_height="wrap_content"
         android:background="#B74299DC"
         android:text="@string/b_section"
@@ -44,6 +48,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cSecBtn"
         android:layout_width="200dp"
+        android:textSize="16sp"
         android:layout_height="wrap_content"
         android:background="#854299DC"
         android:text="@string/c_section"

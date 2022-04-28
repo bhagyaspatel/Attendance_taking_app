@@ -11,4 +11,7 @@
     <string name="dummy_value">fafadfasafafa</string>
     <string name="mark_all_absent">Mark all absent</string>
     <string name="mark_all_present">Mark all present</string>
+    <string name="already_register">Already registered? Click here to login</string>
+    <string name="not_registered">Not registered? Click here to register</string>
+    <string name="announcements">Announcements</string>
 </resources>

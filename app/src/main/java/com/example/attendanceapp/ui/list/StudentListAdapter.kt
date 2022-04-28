@@ -32,6 +32,7 @@ class StudentListAdapter (private var list : MutableList<Student>)
 
     }
 
+
     override fun getItemCount(): Int {
         return list.size
     }

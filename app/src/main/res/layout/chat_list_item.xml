@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/senderEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Dr. Snajay H A"
+        android:textStyle="bold"
+        android:textColor="#0F7DDD"/>
+
+    <TextView
+        android:id="@+id/senderMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#B4000000"
+        android:text="hello this is my first message everyone."
+        android:textSize="14sp"/>
+
+</LinearLayout>

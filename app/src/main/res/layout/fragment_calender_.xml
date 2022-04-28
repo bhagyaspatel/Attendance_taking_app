@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg2"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.drawerPages.CalenderFragment">
 
@@ -35,7 +36,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
